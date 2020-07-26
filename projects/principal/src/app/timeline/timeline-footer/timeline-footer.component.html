@@ -1,0 +1,9 @@
+<div class="div-footer" *ngIf="
+   ( timeLineService.admin.enableForm && timeLineService.isSameUser) ||
+    (timeLineService.privatesRoute  &&
+    !timeLineService.isSameUser) || (timeLineService.admin.enableForm && timeLineService.commentsRoute)
+  ">
+  <img (click)="openBottomSheet()" class="image-footer" src="/assets/add.png" alt="" />
+</div>
+
+<mat-progress-bar mode="determinate" class="progress-bar" *ngIf="percentage" [value]="percentage"></mat-progress-bar>

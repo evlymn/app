@@ -1,0 +1,17 @@
+<div class="timeline-view" *ngIf="timeLineService.admin.enableTimeline">
+  <app-timeline-profile *ngIf="!timeLineService.commentsRoute" [private]="this.timeLineService.privatesRoute">
+  </app-timeline-profile>
+  <div class="timeline-container" *ngIf="user">
+    <div class="timeline-layout" *ngFor="let item of layout"></div>
+    <app-timeline-messages *ngFor="let item of messages" [message]="item"
+      [showFavorites]="timeLineService.admin.enableFavorite" [currentUser]="user"></app-timeline-messages>
+    <app-timeline-comments *ngFor="let item of comments" [item]="item"></app-timeline-comments>
+    <div *ngIf="timeLineService.commentsRoute" class="title-comment">
+      <h2>Comentarios</h2>
+      <img [routerLink]="'/'" class="img-actions" src="/assets/back.png" alt="" />
+    </div>
+  </div>
+</div>
+<div class="fixed-bottom altura-10}}">
+  <app-timeline-footer></app-timeline-footer>
+</div>

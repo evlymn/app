@@ -1,0 +1,140 @@
+.message-container {
+  margin: 5px;
+  -webkit-box-shadow: 0px 0px 4px -1px #000000;
+  box-shadow: 0px 0px 4px -1px #000000;
+  padding: 5px;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: grayscale($color: #292929) !important;
+}
+
+.top-container {
+  display: flex;
+  align-content: center;
+  height: 40px;
+  padding: 2.5px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: auto;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.nome {
+  font-weight: bold;
+  margin: 0px;
+  margin-left: 10px;
+  font-weight: bold;
+  clip: auto;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin: 10px;
+  margin-bottom: 5px;
+  color: grayscale($color: #acacac);
+}
+
+.text-grande {
+  margin: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.164));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.image-message {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top: grayscale($color: #363636) solid 0.5px;
+}
+
+.time-container {
+  color: gray;
+  margin: 5px;
+}
+
+app-timeline-message {
+  background-color: grayscale($color: #292929) !important;
+}
+
+.icons {
+  display: flex;
+}
+
+small {
+  border-radius: 5%;
+  padding-bottom: 10px;
+  margin-left: 3px;
+  color: rgb(94, 94, 94);
+  margin-right: 8px;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  color: grayscale($color: #a5a5a5);
+  margin: 0px;
+}
+
+.first-comment-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3px;
+}
+
+.last-comment {
+  color: grayscale($color: #6b6969);
+  font-size: 11px;
+}
+
+.avatar-name {
+  display: flex;
+}
+
+::ng-deep .menu {
+  background-color: grayscale($color: #3b3b3b) !important;
+  color: grayscale($color: #bebebe) !important;
+  text-align: center;
+}
+
+::ng-deep .mat-menu-item {
+  color: grayscale($color: #bebebe) !important;
+}
+
+.text-update {
+  width: 100%;
+  margin-top: 5px;
+  background-color: grayscale($color: #797979);
+  color: rgb(221, 221, 221);
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.update-actions {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
+}

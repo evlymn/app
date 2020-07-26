@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="424px" height="424px" viewBox="0 0 424 424" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>add</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M99,173.25 L99,222.75 L173.25,222.75 L173.25,297 L222.75,297 L222.75,222.75 L297,222.75 L297,173.25 L222.75,173.25 L222.75,99 L173.25,99 L173.25,173.25 L99,173.25 Z M198,396 C88.6476141,396 0,307.35238 0,198 C0,88.6476195 88.6476141,0 198,0 C307.352385,0 396,88.6476195 396,198 C396,307.35238 307.352385,396 198,396 Z" id="path-1"></path>
+        <filter x="-5.6%" y="-4.5%" width="112.1%" height="112.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="2" dy="6" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="add" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <ellipse id="Oval" fill="#131415" opacity="0.715750558" cx="211.5" cy="214.5" rx="112.5" ry="134.5"></ellipse>
+        <g transform="translate(12.000000, 8.000000)" fill-rule="nonzero" id="Oval-210-copy">
+            <g>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#F7B500" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

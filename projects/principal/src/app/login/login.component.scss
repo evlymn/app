@@ -1,0 +1,41 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.flex-container > div {
+  font-family: sans-serif;
+}
+
+.flex-container-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-container-buttons img {
+  width: 70px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 100px;
+}
+
+h1 {
+  color: whitesmoke;
+  display: none;
+}
+
+small {
+  color: gray;
+  margin: 10px;
+}

@@ -1,0 +1,22 @@
+<div class="profiles-container">
+  <div class="profile-container" *ngIf="id">
+    <img *ngIf="photoURL" class="{{ !private ? 'avatar' : 'avatar-menor' }}" [src]="photoURL" alt="" />
+    <label *ngIf="displayName" class="nome">{{ displayName }}</label>
+    <h6 *ngIf="email && !private" class="email">{{ email }}</h6>
+    <div *ngIf="!private" class="actions">
+      <img [routerLink]="'/'" class="img-actions" src="/assets/back.png" alt="" />
+      <img [routerLink]="'/privates/' + id" class="img-actions" src="/assets/chat.png" alt="" />
+    </div>
+  </div>
+
+  <div class="profile-container" *ngIf="private">
+    <img *ngIf="auth.currentUser?.photoURL" class="{{ !private ? 'avatar' : 'avatar-smaller' }}" alt=""
+      [src]="auth.currentUser?.photoURL" />
+    <label *ngIf="auth.currentUser?.displayName" class="nome">{{
+      auth.currentUser?.displayName
+    }}</label>
+  </div>
+</div>
+<div *ngIf="private" class="actions">
+  <img [routerLink]="'/'" class="img-actions" src="/assets/back.png" alt="" />
+</div>

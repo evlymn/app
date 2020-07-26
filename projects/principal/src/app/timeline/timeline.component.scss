@@ -1,0 +1,108 @@
+.timeline-view {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+}
+.timeline-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  height: auto;
+  width: 95%;
+  min-height: 100% !important;
+  overflow-x: scroll;
+
+  margin-bottom: 10px;
+  background-color: grayscale($color: #2e2e2e) !important;
+  // margin-top: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grayscale($color: #2e2e2e) !important;
+  position: fixed;
+  top: 0;
+  width: 95%;
+  max-width: 95%;
+  transition: top 0.3s;
+  z-index: 100;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.footer {
+  position: fixed;
+  left: calc(100% -60px);
+  bottom: 0;
+  width: 60px;
+  background-color: transparent;
+  height: 60px;
+  border-width: 0px;
+}
+
+.title {
+  color: gray;
+  font-size: 16px;
+}
+
+html,
+body {
+  background-color: grayscale($color: #292929) !important;
+}
+
+#navbar {
+  background-color: #333; /* Black background color */
+  position: fixed; /* Make it stick/fixed */
+  top: 0; /* Stay on top */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.altura-10 {
+  bottom: 10px;
+}
+
+.timeline-layout {
+  height: 60px;
+  width: 100%;
+}
+
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
+.img-actions {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+.title-comment {
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+.profile-container {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.avatar {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+}
+
+.avatar-smaller {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.nome,
+.email {
+  color: whitesmoke;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-actions {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.profiles-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}

@@ -1,0 +1,8 @@
+# vc deve iniciar o firebase com o comando
+$ firebase init
+# para ele gerar esse arquivo
+{
+  "projects": {
+    "default": "******-com"
+  }
+}

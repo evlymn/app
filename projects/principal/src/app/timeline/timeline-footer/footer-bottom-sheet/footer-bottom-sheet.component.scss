@@ -1,0 +1,117 @@
+.image-cropped {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.image-container {
+  height: 100%;
+  background-color: grayscale($color: #292929);
+}
+
+.text {
+  width: 100%;
+  margin-top: 5px;
+  background-color: grayscale($color: #797979);
+  color: rgb(221, 221, 221);
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+::ng-deep .mat-bottom-sheet-container {
+  background-color: grayscale($color: #292929);
+  color: whitesmoke;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: grayscale($color: #292929) !important;
+}
+
+::ng-deep image-cropper {
+  background-color: grayscale($color: #292929) !important;
+}
+
+.cropper-container {
+  display: flex;
+  justify-content: center;
+  background-color: grayscale($color: #292929) !important;
+}
+
+.mat-card-image {
+  background-color: grayscale($color: #292929) !important;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button-camera {
+  height: 50px;
+}
+
+.icon-camera {
+  font-size: 50px;
+  width: 50px;
+  color: #f7b500;
+}
+
+.icons {
+  font-size: 28px;
+  width: 28px;
+}
+
+.turn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-turn {
+  font-size: 18px;
+  width: 18px;
+}
+
+::ng-deep .mat-form-field {
+  .mat-input-element {
+    background-color: grayscale($color: #353535);
+  }
+  .mat-form-field-label {
+    background-color: grayscale($color: #353535);
+  }
+  .mat-form-field-underline {
+    background-color: grayscale($color: #353535);
+  }
+  .mat-form-field-ripple {
+    background-color: grayscale($color: #353535);
+  }
+  .mat-form-field-required-marker {
+    background-color: grayscale($color: #353535);
+  }
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: whitesmoke;
+    border-color: grayscale($color: #292929) !important;
+  }
+  .mat-form-field-ripple {
+    background-color: grayscale($color: #292929);
+    border-color: grayscale($color: #292929) !important;
+  }
+  .mat-form-field-required-marker {
+    color: whitesmoke;
+    border-color: grayscale($color: #292929) !important;
+  }
+  .mat-input-element {
+    color: whitesmoke;
+    border-color: grayscale($color: #292929) !important;
+  }
+  .mat-form-field-outline {
+    border-color: grayscale($color: #292929) !important;
+  }
+}
+
+input[type='file'] {
+  display: none;
+}

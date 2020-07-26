@@ -1,0 +1,6 @@
+<mat-list-item *ngFor="let item of privateCalls">
+  <a [routerLink]="'/privates/' + item.uid">
+    <img [src]="item.photoURL" class="avatar" alt=""> <small> {{ item.displayName }}</small> <br>
+    <div class="time-container">{{ item.time | amTimeAgo: true }}</div>
+  </a>
+</mat-list-item>

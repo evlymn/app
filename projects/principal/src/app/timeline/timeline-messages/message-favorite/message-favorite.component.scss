@@ -1,0 +1,23 @@
+.favorite-container,
+.favorite-container-id {
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+small {
+  border-radius: 5%;
+  margin-left: 3px;
+  color: rgb(94, 94, 94);
+  margin-right: 8px;
+}
+
+.img-actions {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+.favorite {
+  color: grayscale($color: #eeeded);
+}

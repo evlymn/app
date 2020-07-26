@@ -1,0 +1,8 @@
+<div class="comment-container">
+  <div class="top-div">
+    <img alt="" class="avatar" src="{{ item.photoURL }}" />
+    <h4 class="nome">{{ item.displayName }}</h4>
+  </div>
+  <div class="message" [innerHTML]="item.text"></div>
+  <div class="time">{{ item.time | amTimeAgo: true }}</div>
+</div>

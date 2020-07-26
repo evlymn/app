@@ -1,0 +1,31 @@
+<img alt="" class="image-cropped" [src]="croppedImage" />
+
+<div class="cropper-container">
+  <image-cropper *ngIf="imageChangedEvent" mat-card-image [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="false" [imageQuality]="30" format="jpeg" (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"
+    [canvasRotation]="position"></image-cropper>
+</div>
+<div class="turn-container" *ngIf="imageChangedEvent">
+  <button mat-icon-button (click)="turn()">
+    <mat-icon aria-hidden="false" class="icon-turn">replay</mat-icon>
+  </button>
+</div>
+<div>
+  <textarea class="text" (keyup)="textKeyUp($event)"></textarea>
+</div>
+<div class="actions-container">
+  <button mat-icon-button>
+    <mat-icon aria-hidden="false" (click)="dismiss()" class="icons">cancel</mat-icon>
+  </button>
+
+  <button mat-fab color="accent" *ngIf="showImage && !timelineService.commentsRoute" (click)="file.click()">
+    <mat-icon aria-hidden="false" aria-label="Abrir a cãmera">camera_alt</mat-icon>
+  </button>
+
+  <button mat-icon-button (click)="cutOut()">
+    <mat-icon aria-hidden="false" class="icons" aria-label="Abrir a cãmera">send</mat-icon>
+  </button>
+</div>
+
+<input type="file" capture (change)="fileChangeEvent($event)" accept="image/*" #file />

@@ -1,0 +1,38 @@
+.comment-container {
+  background-color: grayscale($color: #3b3b3b);
+  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.time {
+  color: grayscale($color: #969696);
+  font-size: 10px;
+  text-align: right;
+}
+
+h3 {
+  color: whitesmoke;
+  text-align: center;
+}
+.nome {
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: whitesmoke;
+}
+
+.message {
+  color: rgb(172, 172, 172) !important;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.top-div {
+  display: flex;
+  margin-bottom: 5px;
+}
