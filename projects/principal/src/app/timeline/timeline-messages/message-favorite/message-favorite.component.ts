@@ -57,7 +57,7 @@ export class MessageFavoriteComponent implements OnInit, OnDestroy {
       this.messageId,
       this.currentUserUid,
       this.displayName
-    );
+    ).catch(reason => console.log(reason));
   }
 
   ngOnInit(): void { }
