@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AuthenticationService } from '../firebase/authentication/authentication.service';
-import { AngularFirestore } from '@angular/fire/firestore';
+import {AngularFirestore} from '@angular/fire/firestore';
 import { AngularFireDatabase } from '@angular/fire/database';
+import {AdminRules} from './interfaces/admin-rules';
 
 @Injectable({
   providedIn: 'root'
@@ -31,18 +32,18 @@ export class AdminService {
   public showText = true;
   private enableDisableMessageItems() {
     this.fire
-      .collection('rules')
-      .doc('messages').valueChanges()
+      .collection<AdminRules[]>('rules')
+      .doc<AdminRules>('messages').valueChanges()
       .subscribe({
-        next: (docSnapshot: any) => {
-          this.enableForm = docSnapshot.enableForm;
-          this.enableFavorite = docSnapshot.enableFavorite;
-          this.enableImageSend = docSnapshot.enableImageSend;
-          this.showImages = docSnapshot.showImages;
-          this.enableTimeline = docSnapshot.enableTimeline;
-          this.totalMessages = docSnapshot.totalMessages ?? 40;
-          this.showDirectRoute = docSnapshot.showDirectRoute ?? false;
-          this.showText = docSnapshot.showText;
+        next: (rules) => {
+          this.enableForm = rules.enableForm;
+          this.enableFavorite = rules.enableFavorite;
+          this.enableImageSend = rules.enableImageSend;
+          this.showImages = rules.showImages;
+          this.enableTimeline = rules.enableTimeline;
+          this.totalMessages = rules.totalMessages ?? 40;
+          this.showDirectRoute = rules.showDirectRoute ?? false;
+          this.showText = rules.showText;
         }
       });
   }
