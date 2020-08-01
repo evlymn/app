@@ -49,7 +49,7 @@
         </div>
       </div>
       <div *ngIf="lastComment" class="last-comment" [routerLink]="'/comments/' + message.id">
-        <b>{{ lastComment?.displayName }}</b>
+        <strong>{{ lastComment?.displayName }}</strong>
         {{ lastComment?.text?.substring(0, 30) + "..." }}
       </div>
     </div>

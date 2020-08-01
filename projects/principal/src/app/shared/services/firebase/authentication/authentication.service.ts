@@ -18,15 +18,13 @@ export class AuthenticationService {
 
   private onAuthStateChanged() {
     this.angularFireAuth.auth.onAuthStateChanged(user => {
-      if (user) {
-        if(user) {
+        if (user) {
         this.ngZone.run(() => {
-          this.router.navigate(['']);
+          this.router.navigate(['']).catch(reason => console.log(reason));
         });
-      }
       } else {
         this.ngZone.run(() => {
-          this.router.navigate(['login']);
+          this.router.navigate(['login']).catch(reason => console.log(reason));
         });
       }
     });
