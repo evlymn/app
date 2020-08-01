@@ -47,6 +47,7 @@ export class AdminService {
       });
   }
 
+  // noinspection JSUnusedLocalSymbols
   private enableDisableImages() {
     this.db
       .object('admin/messages/images')
@@ -54,6 +55,7 @@ export class AdminService {
       .subscribe(s => (this.enableImageSend = s as boolean));
   }
 
+  // noinspection JSUnusedLocalSymbols
   private enableDisableFavorites() {
     this.db
       .object('admin/messages/favorites')
@@ -61,6 +63,7 @@ export class AdminService {
       .subscribe(s => (this.enableFavorite = s as boolean));
   }
 
+  // noinspection JSUnusedLocalSymbols
   private enableDisableForm() {
     this.db
       .object('admin/messages/form')
@@ -76,19 +79,9 @@ export class AdminService {
       .subscribe({
         next: (docSnapshot: any) => {
           if (docSnapshot.signOut) {
-            this.auth.signOut();
+            this.auth.signOut().catch(reason => console.log(reason));
           }
         }
       });
-
-    // this.db
-    //   .object('admin/sistema/signOut')
-    //   .valueChanges()
-    //   .subscribe(s => {
-    //     console.log(s);
-    //     if (s) {
-    //       this.auth.signOut();
-    //     }
-    //   });
   }
 }
