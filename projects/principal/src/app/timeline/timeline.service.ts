@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { Message as Message } from './interfaces/message';
-import { StorageService } from '../shared/services/firebase/storage/storage.service';
-import { AuthenticationService } from '../shared/services/firebase/authentication/authentication.service';
-import { AngularFireUploadTask } from '@angular/fire/storage';
-import { AdminService } from '../shared/services/admin/admin.service';
+import {Injectable} from '@angular/core';
+import {AngularFireDatabase} from '@angular/fire/database';
+import {Message as Message} from './interfaces/message';
+import {StorageService} from '../shared/services/firebase/storage/storage.service';
+import {AuthenticationService} from '../shared/services/firebase/authentication/authentication.service';
+import {AngularFireUploadTask} from '@angular/fire/storage';
+import {AdminService} from '../shared/services/admin/admin.service';
 import * as firebase from 'firebase';
 
 @Injectable({
@@ -41,6 +41,7 @@ export class TimelineService {
   deleteMessage(id: string) {
     return this.db.database.ref('messages/timeline/' + id).remove();
   }
+
   setSameUser(uid: string) {
     this.isSameUser = uid ? uid === this.currentUser.uid : true;
   }
@@ -115,7 +116,7 @@ export class TimelineService {
         id: pushId
       }
     }) as unknown) as AngularFireUploadTask;
-    return { pushId, uploadTask };
+    return {pushId, uploadTask};
   }
 
   async checkMessagesCollectionPath(guestUid: any) {
@@ -166,7 +167,7 @@ export class TimelineService {
   }
 
   async createPrivate(guestUid: any, currentUser: any, path: string) {
-    let guest = null;
+    let guest: any;
     if (typeof guestUid === 'string') {
       guest = await this.getUserInfo(guestUid);
     } else {
