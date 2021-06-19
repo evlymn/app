@@ -5,6 +5,7 @@ import { StorageService } from '../shared/services/firebase/storage/storage.serv
 import { AuthenticationService } from '../shared/services/firebase/authentication/authentication.service';
 import { AngularFireUploadTask } from '@angular/fire/storage';
 import { AdminService } from '../shared/services/admin/admin.service';
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root',
