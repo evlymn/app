@@ -112,7 +112,9 @@
               "projects/principal/tsconfig.spec.json",
               "projects/principal/e2e/tsconfig.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {
@@ -130,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "principal"
+  "defaultProject": "principal",
+  "cli": {
+    "analytics": false
+  }
 }
