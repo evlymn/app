@@ -15,7 +15,6 @@
       </mat-menu>
     </div>
   </div>
-
   <div class="image-container" matRipple [matRippleCentered]="false" [matRippleUnbounded]="false" [matRippleTrigger]
     *ngIf="message.imageURL && timelineService.admin.showImages">
     <img class="image-message" (click)="favoriteMessage()" src="{{ message.imageURL }}" alt="" />
@@ -24,7 +23,6 @@
     <div class="text" *ngIf="message.text && message.text.length <= 130" [innerHTML]="message.text"></div>
     <div (click)="showFullText()" class="text-grande" *ngIf="message.text && message.text.length > 130 && !fullText"
       [innerHTML]="message.text.substring(0, 130) + '...'"></div>
-
     <div (click)="showFullText()" class="text" *ngIf="message.text && message.text.length > 130 && fullText"
       [innerHTML]="message.text"></div>
   </div>
@@ -39,7 +37,6 @@
       <mat-icon (click)="updateMessage()" color="accent">check_circle</mat-icon>
     </div>
   </div>
-
   <div class="footer-container" *ngIf="timelineService.admin.showText">
     <div class="last-comment-container">
       <div class="icons">

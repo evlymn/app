@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
-import {AngularFireDatabase} from '@angular/fire/database';
-import {Message as Message} from './interfaces/message';
-import {StorageService} from '../shared/services/firebase/storage/storage.service';
-import {AuthenticationService} from '../shared/services/firebase/authentication/authentication.service';
-import {AngularFireUploadTask} from '@angular/fire/storage';
-import {AdminService} from '../shared/services/admin/admin.service';
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Message as Message } from './interfaces/message';
+import { StorageService } from '../shared/services/firebase/storage/storage.service';
+import { AuthenticationService } from '../shared/services/firebase/authentication/authentication.service';
+import { AngularFireUploadTask } from '@angular/fire/storage';
+import { AdminService } from '../shared/services/admin/admin.service';
 import * as firebase from 'firebase';
 
 @Injectable({
@@ -67,13 +67,14 @@ export class TimelineService {
           time: new Date().valueOf(),
         });
     }
-    return await this.db.database
+    return this.db.database
       .ref(this.messagesPath)
       .child(pushId)
       .set(message);
   }
 
   getProfileMessages(id: string) {
+    console.log('getProfileMessages', id);
     this.messagesPath = 'messages/by_user/' + id;
     return this.db
       .list<Message>('messages/by_user/' + id, (ref) =>
@@ -116,7 +117,7 @@ export class TimelineService {
         id: pushId
       }
     }) as unknown) as AngularFireUploadTask;
-    return {pushId, uploadTask};
+    return { pushId, uploadTask };
   }
 
   async checkMessagesCollectionPath(guestUid: any) {
@@ -173,7 +174,7 @@ export class TimelineService {
     } else {
       guest = guestUid;
     }
-    return await this.db.database
+    return this.db.database
       .ref('messages/private_calls/' + currentUser.uid)
       .child(guest.uid)
       .set({

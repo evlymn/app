@@ -1,7 +1,7 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {AuthenticationService} from '../../shared/services/firebase/authentication/authentication.service';
-import {TimelineService} from '../timeline.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AuthenticationService } from '../../shared/services/firebase/authentication/authentication.service';
+import { TimelineService } from '../timeline.service';
 
 @Component({
   selector: 'app-timeline-profile',

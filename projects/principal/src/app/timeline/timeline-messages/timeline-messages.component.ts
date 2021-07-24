@@ -23,7 +23,7 @@ export class TimelineMessagesComponent implements OnInit {
     public timelineService: TimelineService,
     private snackBar: MatSnackBar,
     private messageFavoriteService: MessageFavoriteService
-  ) { }
+  ) {  }
 
   showFullText() {
     this.fullText = !this.fullText;

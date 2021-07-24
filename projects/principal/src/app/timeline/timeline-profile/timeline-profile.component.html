@@ -5,10 +5,10 @@
     <h6 *ngIf="email && !private" class="email">{{ email }}</h6>
     <div *ngIf="!private" class="actions">
       <img [routerLink]="'/'" class="img-actions" src="/assets/back.png" alt="" />
-      <img *ngIf="id != auth.currentUser.uid" [routerLink]="'/privates/' + id" class="img-actions" src="/assets/chat.png" alt="" />
+      <img *ngIf="id != auth.currentUser?.uid" [routerLink]="'/privates/' + id" class="img-actions"
+        src="/assets/chat.png" alt="" />
     </div>
   </div>
-
   <div class="profile-container" *ngIf="private">
     <img *ngIf="auth.currentUser?.photoURL" class="{{ !private ? 'avatar' : 'avatar-smaller' }}" alt=""
       [src]="auth.currentUser?.photoURL" />

@@ -23,6 +23,7 @@ export class AuthenticationService {
 
     this.angularFireAuth.onAuthStateChanged(user => {
       if (user) {
+        this.currentUser = user;
         this.ngZone.run(() => {
           this.router.navigate(['']).catch(reason => console.log(reason));
         });
