@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MessageFavoriteComponent } from './message-favorite.component';
 
@@ -6,7 +6,7 @@ describe('MensagemFavoritoComponent', () => {
   let component: MessageFavoriteComponent;
   let fixture: ComponentFixture<MessageFavoriteComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MessageFavoriteComponent ]
     })

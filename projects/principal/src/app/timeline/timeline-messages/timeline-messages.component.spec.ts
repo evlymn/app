@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TimelineMessagesComponent } from './timeline-messages.component';
 
@@ -6,7 +6,7 @@ describe('TimelineMessageComponent', () => {
   let component: TimelineMessagesComponent;
   let fixture: ComponentFixture<TimelineMessagesComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ TimelineMessagesComponent ]
     })

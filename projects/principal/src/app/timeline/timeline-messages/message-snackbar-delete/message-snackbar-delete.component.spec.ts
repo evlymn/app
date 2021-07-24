@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MessageSnackbarDeleteComponent } from './message-snackbar-delete.component';
 
@@ -6,7 +6,7 @@ describe('MessageSnackbarDeleteComponent', () => {
   let component: MessageSnackbarDeleteComponent;
   let fixture: ComponentFixture<MessageSnackbarDeleteComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MessageSnackbarDeleteComponent ]
     })

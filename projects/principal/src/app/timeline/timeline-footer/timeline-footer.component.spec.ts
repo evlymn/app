@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TimelineFooterComponent } from './timeline-footer.component';
 
@@ -6,7 +6,7 @@ describe('TimelineFooterComponent', () => {
   let component: TimelineFooterComponent;
   let fixture: ComponentFixture<TimelineFooterComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ TimelineFooterComponent ]
     })
