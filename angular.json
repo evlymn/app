@@ -22,7 +22,6 @@
             "main": "projects/principal/src/main.ts",
             "polyfills": "projects/principal/src/polyfills.ts",
             "tsConfig": "projects/principal/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/principal/src/favicon.ico",
               "projects/principal/src/assets"
@@ -36,7 +35,13 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            ],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -66,7 +71,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
