@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './login.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'app-login',
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   showHideButtons(show: boolean = false) {
+
     document
       .querySelectorAll('.flex-container-buttons, small, h1')
       .forEach((e) => {

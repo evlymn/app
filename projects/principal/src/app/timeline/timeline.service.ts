@@ -135,7 +135,7 @@ export class TimelineService {
       }
     }
     if (!privatePath) {
-      this.checkCreatePrivate(
+      await this.checkCreatePrivate(
         guestUid,
         this.currentUser,
         `messages/private_timeline/${this.currentUser.uid}-${guestUid}`
